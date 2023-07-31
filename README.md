@@ -1,10 +1,10 @@
 # Mobile Mentor App
 
-The Mobile Mentor app is a Streamlit-based application designed to help you kickstart your mobile development journey smoothly and effectively.
+The MobileMentor app is a Streamlit-based application designed to help you kickstart your mobile development journey smoothly and effectively.
 
 ## Installation
 
-To run the Mobile Mentor app, you need to install the following dependencies:
+To run the MobileMentor app, you need to install the following dependencies:
 
 `pip install streamlit langchain openai tiktoken alt-profanity-check`
 
@@ -16,7 +16,7 @@ To start the app, run the following command:
 
 ## Usage
 
-1. Launch the Mobile Mentor app by running the provided command.
+1. Launch the MobileMentor app by running the provided command.
 2. Once the app is running, you will see a text area labeled "**Put your project description here**".
 3. Enter a brief description of your desired mobile app project into the text area.
 4. The app will check for profane and sensitive content in the description. If any such content is detected, an error message will be displayed, and you will need to provide another description.
@@ -29,6 +29,9 @@ To start the app, run the following command:
    - **Resources**: A list of documentation URLs for the tools mentioned in the tech stack.
    - **Features**: Suggestions for features and functionalities to be integrated into the app.
    - **Advice**: Guidance and advice for successfully developing your mobile app.
+
+## Note
+The clarity of the prompt directly influences the specificity of the response. When a development environment is not specified, the recommendations are more likely to be oriented towards hybrid development tools. On the other hand, when a specific environment such as iOS or Android is provided, the suggestions will be adjusted to match that particular platform.
 
 ## Rate Limit Considerations
 
