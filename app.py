@@ -155,8 +155,9 @@ prompt = st.text_area("**Put your project description here**")
 # Process user input
 if prompt:
     # Check for profane and sensitive content
-    is_sensitive = any(predict([prompt]))
-    validation_response = str(validation_chain.run(description=prompt)).lower().strip()
+    with st.spinner("Checking prompt..."):
+        is_sensitive = any(predict([prompt]))
+        validation_response = str(validation_chain.run(description=prompt)).lower().strip()
 
     if is_sensitive or validation_response == 'flag':
         # Handle sensitive or inappropriate content
@@ -167,7 +168,8 @@ if prompt:
             st.info('Your description may not have enough context, be inappropriate, sensitive, or offensive. Please provide another prompt')
     else:
         # Generate responses
-        response = sequential_chain({'description': prompt})
+        with st.spinner("Generating response..."):
+            response = sequential_chain({'description': prompt})
         success_phrase = get_success_phrase()
         st.balloons()
         st.write(success_phrase)
