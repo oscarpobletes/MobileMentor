@@ -1,4 +1,4 @@
-# Mobile Mentor App
+# Mobile Mentor
 
 The Mobile Mentor app combines Streamlit and LangChain to help you kickstart your mobile development journey smoothly and effectively.
 
